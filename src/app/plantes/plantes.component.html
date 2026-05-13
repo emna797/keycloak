@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Liste de Plantes</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Date Création</th>
+                </tr>
+
+                @for (plante of plantes; track plante)
+                {
+                <tbody>
+                    <tr>
+                        <td>{{plante.idPlante}}</td>
+                        <td>{{plante.nomPlante}}</td>
+                        <td>{{plante.prixPlante}}</td>
+                        <td>{{plante.dateAjout | date:'dd/MM/yyyy'}}</td>
+                    </tr>
+                </tbody>
+                }
+            </table>
+        </div>
+    </div>
+</div>
