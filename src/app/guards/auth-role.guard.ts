@@ -24,6 +24,7 @@ const isAccessAllowed = async (
     Object.values(grantedRoles.realmRoles).some((roles) =>
       roles.includes(role)
     );
+  console.log('Resources Roles :' + grantedRoles.resourceRoles['plante-app']);
 
   if (authenticated && hasRequiredRole(requiredRole)) {
     return true;
